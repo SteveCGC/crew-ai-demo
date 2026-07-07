@@ -9,6 +9,7 @@ load_dotenv()
 
 llm = LLM(
     model=os.environ["DASHSCOPE_MODEL"],
+    provider="openai",  # 百炼提供 OpenAI 兼容接口，走 openai 原生 provider + 自定义 base_url
     api_key=os.environ["DASHSCOPE_API_KEY"],
     base_url=os.environ["DASHSCOPE_BASE_URL"],
 )

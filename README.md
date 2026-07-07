@@ -1,6 +1,11 @@
 # crew-ai-demo
 
-学习 [CrewAI](https://docs.crewai.com/) 的示例项目，包含一个最简单的 demo：单个 Agent + Task，调用阿里百炼(DashScope)的 OpenAI 兼容接口。
+学习 [CrewAI](https://docs.crewai.com/) 的项目。
+
+## 目录结构
+
+- [demos/](demos/)：学习各个知识点用的小 demo（单 Agent、多 Agent、Tools、Flow 等）
+- [projects/](projects/)：更完整的项目实战
 
 ## 环境准备
 
@@ -28,9 +33,9 @@ cp .env.example .env
 
 ```bash
 source .venv/bin/activate
-python main.py
+python demos/bailian_basic.py
 ```
 
-`main.py` 创建了一个"科普作家"角色的 Agent，执行一个任务（用 3 句话解释 CrewAI），
+`demos/bailian_basic.py` 创建了一个"科普作家"角色的 Agent，执行一个任务（用 3 句话解释 CrewAI），
 并打印最终结果。默认使用 `qwen-plus` 模型，可以在 `.env` 里改 `DASHSCOPE_MODEL`
 换成 `dashscope/qwen-turbo` / `dashscope/qwen-max` 等，无需改代码。
